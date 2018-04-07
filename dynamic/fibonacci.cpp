@@ -11,7 +11,19 @@ long count_fibonacci(int number) {
 int main() {
     int number;
     std::cin >> number;
-    std::cout << count_fibonacci(number);
+
+    int fibonacci;
+    if (number <= 2) {
+        fibonacci = 1;
+    } else {
+        int previous = fibonacci = 1;
+        for (int i = 2; i < number; ++i) {
+            int temp = fibonacci;
+            fibonacci += previous;
+            previous = temp;
+        }
+    }
+    std::cout << fibonacci;
 
     return 0;
 }
