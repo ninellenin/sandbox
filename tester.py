@@ -21,7 +21,7 @@ def read_test(test):
         return None
     question = ""
     answer = ""
-    while s != "" and s != "\n":
+    while s != "" and s != "-\n":
         question += s
         s = test.readline()
     s = test.readline()
